@@ -1,17 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+  <header>
+    <div class="card text-center">
+      <div class="p-3 mb-2 bg-primary text-white">
+        <h1>Jaïn Racine</h1>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+            <rect width="100%" height="100%" fill="#033C73" /></svg>
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <h2 class="text-primary">Présentation</h2>
+              <p>Possédant un CFC d'employé de commerce avec maturité integrée, je suis actuellement en formation
+                d'informaticien de gestion à la HEG-ARC à temps partiel. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="it2.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+          <title>IT</title>
+          <rect width="100%" height="100%" fill="#777" /></svg>
+          <h2>Informatique</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Java</li>
+            <li class="list-group-item">HTML / CSS</li>
+            <li class="list-group-item">SQL</li>
+          </ul>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="language.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+          <title>Langues</title>
+          <rect width="100%" height="100%" fill="#777" /></svg>
+          <h2>Langues</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Français</li>
+            <li class="list-group-item">Anglais</li>
+            <li class="list-group-item">Allemand</li>
+          </ul>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="business.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+          <title>Gestion</title>
+          <rect width="100%" height="100%" fill="#777" /></svg>
+          <h2>Gestion</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Systèmes d'information</li>
+            <li class="list-group-item">Marketing</li>
+            <li class="list-group-item">Comptabilité</li>
+          </ul>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <h1 class="text-center">Occupations actuelles</h1>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Etudes : <span class="text-muted">HE-ARC</span></h2>
+          <p class="lead">Grâce aux compétences spécialisées de son corps enseignant, à la diversité de ses filières de
+            formation et à la qualité de ses équipements, la Haute Ecole Arc est un acteur reconnu et un partenaire
+            privilégié des mondes industriel, politique, académique et institutionnel.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="heglogo.jpg" width="400" height="400" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+          <title>HEG</title>
+          <rect width="50%" height="50%" fill="#eee" />
+        </div>
+      </div>
+
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Emploi : <span class="text-muted">Job Service</span></h2>
+          <p class="lead">Depuis plus de 30 ans, Job Service s’engage et soutient les jeunes de 15 à 30 ans dans leur
+            insertion socio-professionnelle. La Fondation, reconnue d’utilité publique, est certifiée eduQua depuis
+            2003. Cette certification représente une reconnaissance de l’ensemble des formations continues proposées aux
+            jeunes accompagné-e-s par les collaborateur-trice-s de Job Service et confirme la qualité des prestations de
+            la Fondation.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="eduqua.svg" width="400" height="400" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+          <title>Job Service</title>
+          <rect width="50%" height="50%" fill="#eee" />
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="jumbotron">
+        <h1 class="display-4">PLEASE HIRE ME I NEED A JOB</h1>
+        <p class="lead">Hier ist der Beweis, dass ich mehrere Sprachen sprechen und Programmiersprachen verwenden kann.
+        </p>
+        <hr class="my-4">
+        <p>Ce texte est entre deux balises "p", ce qui dénote un paragraphe en HTML.</p>
+        <a class="btn btn-primary btn-lg" href="https://www.reddit.com/r/bootstrap/" role="button">Ceci est un lien vers
+          la communauté Bootstrap de Reddit. </a>
+      </div>
+      <!-- /END THE FEATURETTES -->
+    </div><!-- /.container -->
+
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-right"><a href="#">Back to top</a></p>
+    </footer>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+</body>
+
 </html>
