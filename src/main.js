@@ -5,7 +5,8 @@ import "bootstrap";
 import "bootswatch/dist/cerulean/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import './main.css';
+import "jquery-smooth-scroll";
 
 $(document).ready(() => {
-  console.log("it works!");
+    $("a").smoothScroll();
 });
