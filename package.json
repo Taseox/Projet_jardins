@@ -13,10 +13,12 @@
     "bootstrap": "^4.5.0",
     "bootswatch": "^4.5.0",
     "chart.js": "^2.9.3",
+    "choreographer-js": "^1.1.0",
     "core-js": "^3.6.5",
     "jquery": "^3.5.1",
     "jquery-smooth-scroll": "^2.2.0",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "three": "^0.118.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",

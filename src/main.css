@@ -7,7 +7,36 @@ body {
     padding-bottom: 0rem;
   }
   
+
+  .scaler {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    animation: scale 4s infinite linear;    
+}
+
+
+@keyframes scale {
+    from {
+           transform: scaleX(100) scaleY(100);
+    }
+    to{
+           transform: scaleX(1) scaleY(1);
+    }
+}
   
+  .rounded{
+      animation-name:            scale; 
+      animation-duration:        3s; 
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+  }
+
+  
+
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
   
@@ -18,21 +47,15 @@ body {
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
     bottom: 0rem;
-    z-index: 10;
+    z-index: 11;
   }
   
   /* Declare heights because of positioning of img element */
   .carousel-item {
     height: 11rem;
+    margin-top: 0;
   }
-  .carousel-item > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 32rem;
-  }
-  
+
   
   /* MARKETING CONTENT
   -------------------------------------------------- */
@@ -87,4 +110,13 @@ body {
       margin-top: 7rem;
     }
   }
+  
+  #box {
+    width: 100%;
+    height: 5vh;
+    background: #033c73;
+    opacity: 1;
+    transition: background-color 0.2s ease-in-out;
+  }
+
   

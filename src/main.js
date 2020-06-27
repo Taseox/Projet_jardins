@@ -10,33 +10,55 @@ import "jquery-smooth-scroll";
 import Chart from "chart.js";
 
 $(document).ready(() => {
-  $("a").smoothScroll();
+  const progressBars = findProgressBars();
+  replaceProgressBars(progressBars);
 });
 
-var ctx = document.getElementById("myChart").getContext("2d");
-var chart = new Chart(ctx, {
-  type: "doughnut",
+function findProgressBars() {
+  return [...document.querySelectorAll(".progress")];
+}
 
-  data: {
-    labels: ["Force", "Agilité", "Intelligence", "Dexterité"],
-    datasets: [
-      {
-        label: "My First dataset",
-        backgroundColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)"
-        ],
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)"
-        ],
-        data: [10, 3, 1, 4]
-      }
-    ]
-  },
-  options: {}
+function replaceProgressBars(progressBars) {
+  for (let progressBar of progressBars) {
+    const valueElement = progressBar.querySelector(".progress-bar");
+    var value = valueElement.getAttribute("aria-valuenow");
+    var canvas = document.createElement("canvas");
+    var color = valueElement.getAttribute("class");
+    progressBar.replaceWith(canvas);
+    createChart(canvas, value, color);
+  }
+}
+
+function createChart(ctx, value, color) {
+  //FAIRE UN IF ICI POUR LA COULEUR!
+  new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      datasets: [
+        {
+          data: [value, 100 - value],
+          backgroundColor: ["white", "white"],
+          borderColor: ["#00c9ff", "white"]
+        }
+      ]
+    },
+    options: {}
+  });
+}
+
+const Choreographer = require("choreographer-js");
+
+var choreographer = new Choreographer({
+  animations: [
+    {
+      range: [window.innerWidth / 2, window.innerWidth],
+      selector: "#box",
+      type: "change",
+      style: "backgroundColor",
+      to: "#00c9ff"
+    }
+  ]
+});
+window.addEventListener("mousemove", function(e) {
+  choreographer.runAnimationsAt(e.clientX);
 });
