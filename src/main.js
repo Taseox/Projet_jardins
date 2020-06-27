@@ -30,15 +30,21 @@ function replaceProgressBars(progressBars) {
 }
 
 function createChart(ctx, value, color) {
-  //FAIRE UN IF ICI POUR LA COULEUR!
+  if (color === "progress-bar bg-success") {
+    color = "#033a6f";
+  } else if (color === "progress-bar bg-primary") {
+    color = "#C71C22";
+  } else {
+    color = "#73a839";
+  }
   new Chart(ctx, {
     type: "doughnut",
     data: {
       datasets: [
         {
           data: [value, 100 - value],
-          backgroundColor: ["white", "white"],
-          borderColor: ["#00c9ff", "white"]
+          backgroundColor: [color, "white"],
+          borderColor: ["white", "white"]
         }
       ]
     },

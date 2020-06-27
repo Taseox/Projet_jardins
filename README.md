@@ -1,4 +1,6 @@
-Je me suis tout d'abord décidé sur la template "Carousel" du site Bootstrap car je la trouvais visuellement intéressante et relativement adaptée pour un CV moderne.
+Les outils utilisés sont Visual Studio Code pour l'écriture du code et l'utilisation du terminal de commande et Google Chrome pour l'accès internet et les recherches de ressources.
+
+Pour la création du CV, je me suis tout d'abord décidé sur la template "Carousel" du site Bootstrap car je la trouvais visuellement intéressante et relativement adaptée pour un CV moderne.
 
 J'ai d'abord modifié la partie "marketing" avec les 3 images rondes. Au départ j'ai eu quelques problèmes à inclure les images, mais j'ai finalement enlevé la partie "svg" dans le document html et l'ai remplacé par les images directement. Je perds la forme "ronde" de l'image en procédant de cette manière, mais les images sont complètes au moins.
 
