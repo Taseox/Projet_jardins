@@ -40,6 +40,7 @@ function createChart(ctx, value, color) {
   new Chart(ctx, {
     type: "doughnut",
     data: {
+      labels: ["", ""],
       datasets: [
         {
           data: [value, 100 - value],
@@ -48,7 +49,11 @@ function createChart(ctx, value, color) {
         }
       ]
     },
-    options: {}
+    options: {
+      legend: {
+        display: false
+      }
+    }
   });
 }
 
