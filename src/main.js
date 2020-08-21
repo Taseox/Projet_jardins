@@ -9,6 +9,4 @@ import "./main.css";
 import "jquery-smooth-scroll";
 import Chart from "chart.js";
 
-$(document).ready(() => {
- 
-});
+$(document).ready(() => {});
